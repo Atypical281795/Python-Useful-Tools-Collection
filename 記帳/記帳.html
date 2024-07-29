@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>記帳系統</title>
+    <link rel="stylesheet" href="記帳.css">
+</head>
+<body>
+    <div id="app">
+        <h1>記帳系統</h1>
+        <div id="activities">
+            <h2>活動列表</h2>
+            <ul id="activity-list"></ul>
+        </div>
+        <div id="new-activity">
+            <h2>新增活動</h2>
+            <input type="text" id="activity-name" placeholder="活動名稱">
+            <button onclick="addActivity()">新增活動</button>
+        </div>
+        <div id="activity-details" style="display: none;">
+            <h2 id="activity-title"></h2>
+            <button onclick="backToActivities()">回到活動列表</button>
+            <h3>新增項目</h3>
+            <input type="text" id="item-name" placeholder="項目">
+            <input type="number" id="item-amount" placeholder="金額">
+            <input type="text" id="item-person" placeholder="請款人">
+            <input type="date" id="item-date">
+            <input type="file" id="item-attachment">
+            <button onclick="addItem()">新增項目</button>
+            <ul id="item-list"></ul>
+        </div>
+    </div>
+    <script src="記帳.js"></script>
+</body>
+</html>
